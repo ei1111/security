@@ -20,6 +20,7 @@ public class JoinController {
     private final JoinService joinService;
 
     @PostMapping("/api/v1/join")
+    //public ResponseEntity<CommonResponse> joinPorcess(@Valid @RequestBody JoinRequestDto joinRequestDto) {
     public ResponseEntity<CommonResponse> joinPorcess(@Valid @RequestBody JoinRequestDto joinRequestDto) {
         joinService.joinProcess(joinRequestDto);
         return ResponseEntity
